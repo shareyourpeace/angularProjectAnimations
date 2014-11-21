@@ -1,0 +1,12 @@
+<h2>Actors</h2>
+<table>
+    <tr>
+        <th>Actor</th>
+        <th>Show</th>
+    </tr>
+    
+    <tr ng-repeat="actor in actors">
+        <td>{{actor.name}}</td>
+        <td>{{actor.total | currency }}</td>
+    </tr>
+</table>

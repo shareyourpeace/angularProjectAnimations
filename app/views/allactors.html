@@ -1,0 +1,18 @@
+<h2>All Actors</h2>
+<br />
+Filter: <input type="text" ng-model="actorFilter.product" />
+<br /><br />
+<table class="table">
+    <tr>
+        <th>Actor</th>
+        <th>Total</th>
+    </tr>
+    <tr ng-repeat="actor in actors | filter:actorFilter | orderBy:'name'" class="repeat-animation">
+        <td>{{ actor.actor }}</td>
+        <td>{{ actor.total | number }}</td>
+    </tr>
+    <tr ng-class="actorsType">
+        <td>&nbsp;</td>
+        <td>{{ actorsTotal | number }}</td>
+    </tr>
+</table>
